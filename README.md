@@ -73,6 +73,7 @@ tianyuyan2001@gmail.com or wanzifu2000@gmail.com or zhpp@dlut.edu.cn
 
 If you find our work can help your reseach, please consider citing:
 
+```bibtex
 @InProceedings{Yan_2022_ACCV,
     author    = {Yan, Tianyu and Wan, Zifu and Zhang, Pingping},
     title     = {Fully Transformer Network for Change Detection of Remote Sensing Images},
@@ -81,4 +82,4 @@ If you find our work can help your reseach, please consider citing:
     year      = {2022},
     pages     = {1691-1708}
 }
-
+```
