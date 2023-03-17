@@ -1,36 +1,50 @@
-#########################################################
+# Fully Transformer Network for Change Detection of Remote Sensing Images
+****
 
-This Repo. is used for our ACCV2022 paper: 
+Paper Links: [Fully Transformer Network for Change Detection of Remote Sensing Images
+](https://openaccess.thecvf.com/content/ACCV2022/html/Yan_Fully_Transformer_Network_for_Change_Detection_of_Remote_Sensing_Images_ACCV_2022_paper.html)
 
-Fully Transformer Network for Change Detection of Remote Sensing Images
+by [Tianyu Yan](), [Zifu Wan](), [Pingping Zhang*](https://github.com/AI-Zhpp).
 
-(https://arxiv.org/abs/2210.00757)
+## Introduction
+****
+Recently, change detection (CD) of remote sensing images have achieved great progress with the advances of deep learning. However, current methods generally deliver incomplete CD regions and irregular CD boundaries due to the limited representation ability of the extracted visual features. To relieve these issues, in this work we propose a novel learning framework named Fully Transformer Network (FTN) for remote sensing image CD, which improves the feature extraction from a global view and combines multi-level visual features in a pyramid manner. More specifically, the proposed framework first utilizes the advantages of Transformers in long-range dependency modeling. It can help to learn more discriminative global-level features and obtain complete CD regions. Then, we introduce a pyramid structure to aggregate multi-level visual features from Transformers for feature enhancement. The pyramid structure grafted with a Progressive Attention Module (PAM) can improve the feature representation ability with additional interdependencies through channel attentions. Finally, to better train the framework, we utilize the deeply-supervised learning with multiple boundaryaware loss functions. Extensive experiments demonstrate that our proposed method achieves a new state-of-the-art performance on four public CD benchmarks.
 
-https://openaccess.thecvf.com/content/ACCV2022/papers/Yan_Fully_Transformer_Network_for_Change_Detection_of_Remote_Sensing_Images_ACCV_2022_paper.pdf
+## Update
+**** 
 
-#########################################################
+* 03/17/2023: The code has been updated.
 
-For using the codes, please download the public change detection datasets (more details are provided in the paper): 
+## Requirements
+****
+* python 3.5+
+* PyTorch 1.1+
+* torchvision
+* Numpy
+* tqdm
+* OpenCV
 
-LEVIR-CD,
+## Preperations
+****
 
-WHU-CD,
+For using the codes, please download the public change detection datasets 
+(more details are provided in the paper) :
+* LEVIR-CD
+* WHU-CD
+* SYSU-CD
+* Google-CD
 
-SYSU-CD,
+Then, run the following codes with your GPUs. 
+You can get the same results in the above paper.  
 
-Google-CD.
-
-Besides, please install the Pytorch as the Official Suggestions.
-
-Then, run the following codes with your GPUs. You can get the same results in the above paper.  
-
-The codes can be download at 
+The codes can be downloaded at 
 
 Link：https://pan.baidu.com/s/1ellGHVTXNRp0gmeMEPJYcA
 
 Extracting code：b99t
 
-######################## Usage ###########################
+## Usage
+****
 
 ### 1. Download pre-trained Swin Transformer models
 * [Get models in this link](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth): SwinB pre-trained on ImageNet22K 
@@ -38,40 +52,48 @@ Extracting code：b99t
 
 ### 2. Prepare data
 
-Please use split.py to split the images first, and use bimap.py, deal.py and check.py to make the GT images become binary images.
+* Please use *utils/split.py* to split the images to 224*224 first.
+* Use *utils/check.py* to check if the labels are binary form. Info will be printed if your label form is incorrect.
+* Use *utils/bimap.py* if the labels are not binary.
+* You may need to move the aforementioned files to corresponding places.
 
-### 3. Environment
+### 3. Train/Test
 
-Please prepare an environment with python=3.7, opencv, torch and torchvision. And then when running the program, it reminds you to install whatever library you need.
-
-### 4. Train/Test
-
-- If you want to try the model, you can directly use the train.py.
+- For training, run:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python train.py
+python train_(name of the dataset).py
 ```
 
-- If you want to use the SSIM and IOU loss function with CrossEntropy loss funtion together, you just need to remove comments in train.py (below the CrossEntropy loss) and add the loss operation in the loss calculation place.
-- Especially, when you calculate the IOU loss, you need to convert the images (convert 0->1, 1->0). Because the image pixels values are mostly 0, and it will influence the IOU loss calculation (Based on IOU loss characteristic).
+[//]: # (- If you want to use the SSIM and IOU loss function with CrossEntropy loss funtion together, you just need to remove comments in train.py &#40;below the CrossEntropy loss&#41; and add the loss operation in the loss calculation place.&#41;)
+[//]: # (- Especially, when you calculate the IOU loss, you need to convert the images &#40;convert 0->1, 1->0&#41;. Because the image pixels values are mostly 0, and it will influence the IOU loss calculation &#40;Based on IOU loss characteristic&#41;.)
 
-- If you want to obtain the result, you can directly use the test.py.
+- For prediction, run:
 ```bash
-python test.py 
+python test_swin.py 
+```
+
+- For evaluation, run:
+```bash
+python deal_evaluation.py 
 ```
 
 ## Reference
+****
+
 * [Swin Transformer](https://github.com/microsoft/Swin-Transformer)
 
-########################################################
+## Contact
+****
 
 If you have any problems. Please concat
 
 tianyuyan2001@gmail.com or wanzifu2000@gmail.com or zhpp@dlut.edu.cn
 
-########################################################
+## Citation
+****
 
-If you find our work can help your reseach, please consider citing:
+If you find our work helpful to your research, please cite with:
 
 ```bibtex
 @InProceedings{Yan_2022_ACCV,
