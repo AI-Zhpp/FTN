@@ -4,7 +4,7 @@
 Paper Links: [Fully Transformer Network for Change Detection of Remote Sensing Images
 ](https://openaccess.thecvf.com/content/ACCV2022/html/Yan_Fully_Transformer_Network_for_Change_Detection_of_Remote_Sensing_Images_ACCV_2022_paper.html)
 
-by [Tianyu Yan](), [Zifu Wan](), [Pingping Zhang*](https://github.com/AI-Zhpp).
+by [Tianyu Yan](), [Zifu Wan](), [Pingping Zhang*](https://scholar.google.com/citations?user=MfbIbuEAAAAJ&hl=zh-CN).
 
 ## Introduction
 ****
@@ -34,8 +34,7 @@ For using the codes, please download the public change detection datasets
 * SYSU-CD
 * Google-CD
 
-Then, run the following codes with your GPUs. 
-You can get the same results in the above paper.  
+Then, run the following codes with your GPUs, and you can get the same results in the above paper.  
 
 
 ## Usage
