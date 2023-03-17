@@ -1,4 +1,4 @@
-# Fully Transformer Network for Change Detection of Remote Sensing Images
+﻿# Fully Transformer Network for Change Detection of Remote Sensing Images
 ****
 
 Paper Links: [Fully Transformer Network for Change Detection of Remote Sensing Images
@@ -37,11 +37,6 @@ For using the codes, please download the public change detection datasets
 Then, run the following codes with your GPUs. 
 You can get the same results in the above paper.  
 
-The codes can be downloaded at 
-
-Link：https://pan.baidu.com/s/1ellGHVTXNRp0gmeMEPJYcA
-
-Extracting code：b99t
 
 ## Usage
 ****
