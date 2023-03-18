@@ -34,7 +34,7 @@ For using the codes, please download the public change detection datasets
 * SYSU-CD
 * Google-CD
 
-The possessed datasets can be downloaded at this [link](https://drive.google.com/drive/folders/1Knqdxb6g8_7NFKqeHgnp-iUEMRemGCNh?usp=share_link).
+The processed datasets can be downloaded at this [link](https://drive.google.com/drive/folders/1Knqdxb6g8_7NFKqeHgnp-iUEMRemGCNh?usp=share_link).
 
 Then, run the following codes with your GPUs, and you can get the same results in the above paper.  
 
