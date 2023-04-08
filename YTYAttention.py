@@ -90,7 +90,7 @@ class ppattention_wan(nn.Module):
         attn = self.sigmoid(avg_out)
         x_channel_summation = torch.sum(x, dim=1, keepdim=True)
         attn_channel_summation = self.sigmoid(self.fc2(x_channel_summation))
-        result = x * attn + res + attn_channel_summation * r
+        result = x * attn + res + attn_channel_summation * res
         return result
 
 
