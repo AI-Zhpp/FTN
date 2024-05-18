@@ -84,7 +84,7 @@ python deal_evaluation.py
 
 If you have any problems. Please concat
 
-QQ: 1580329199.
+QQ: 1580329199
 
 Email: tianyuyan2001@gmail.com or wanzifu2000@gmail.com
 
