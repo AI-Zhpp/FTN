@@ -84,7 +84,9 @@ python deal_evaluation.py
 
 If you have any problems. Please concat
 
-tianyuyan2001@gmail.com or wanzifu2000@gmail.com or zhpp@dlut.edu.cn
+QQ: 1580329199.
+
+Email: tianyuyan2001@gmail.com or wanzifu2000@gmail.com
 
 ## Citation
 ****
